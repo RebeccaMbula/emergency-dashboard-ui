@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Emergency System - Tickets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="placeholder-logo.png" alt="Kenya Red Cross">
+                <span>SOS emergency system</span>
+            </div>
+            <nav>
+                <div class="nav-item active">Dashboard</div>
+                <div class="nav-item"><a href="./incidents.html">Incident Tickets</a></div>
+                <div class="nav-item">Public Messaging</div>
+                <div class="nav-item">Partner Contacts</div>
+                <div class="nav-item">Settings</div>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-semibold text-gray-900">Tickets</h1>
+                <div class="flex items-center space-x-4">
+                    <input type="search" placeholder="Search"
+                        class="px-4 py-2 rounded border border-gray-200 focus:border-blue-500 focus:outline-none">
+                    <svg class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 6V12M12 12V18M12 12H18M12 12H6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="h-6 w-6 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16V12M12 8H12.01" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <img src="/api/placeholder/32/32" alt="Profile" class="h-8 w-8 rounded-full">
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex space-x-4 mb-6">
+                <button
+                    class="flex items-center space-x-1 px-3 py-1.5 bg-white border border-gray-200 rounded hover:border-blue-500 focus:border-blue-500 focus:outline-none">
+                    <span class="text-sm text-gray-600">Filter by status</span>
+                    <svg class="h-4 w-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button
+                    class="flex items-center space-x-1 px-3 py-1.5 bg-white border border-gray-200 rounded hover:border-blue-500 focus:border-blue-500 focus:outline-none">
+                    <span class="text-sm text-gray-600">Location</span>
+                    <svg class="h-4 w-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button
+                    class="flex items-center space-x-1 px-3 py-1.5 bg-white border border-gray-200 rounded hover:border-blue-500 focus:border-blue-500 focus:outline-none">
+                    <span class="text-sm text-gray-600">Purpose</span>
+                    <svg class="h-4 w-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 9L12 15L18 9" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Table -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100">
+                <table class="w-full">
+                    <thead class="bg-gray-50 border-b border-gray-200">
+                        <tr>
+                            <th class="w-8 p-4">
+                                <input type="checkbox" class="rounded border-gray-300">
+                            </th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Name of the caller</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Purpose</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Location</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Date and Time</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Attachments</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Status</th>
+                            <th class="px-4 py-3 text-left text-sm font-medium text-gray-600">Comments</th>
+                            <th class="w-8 px-4 py-3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="p-4">
+                                <input type="checkbox" class="rounded border-gray-300">
+                            </td>
+                            <td class="px-4 py-3 text-sm text-gray-900">James</td>
+                            <td class="px-4 py-3 text-sm text-gray-900">Flood</td>
+                            <td class="px-4 py-3 text-sm text-gray-900">Tana River</td>
+                            <td class="px-4 py-3 text-sm text-gray-900">23:47 pm, 15 Aug 2024</td>
+                            <td class="px-4 py-3 text-sm text-gray-900">
+                                <div class="flex items-center space-x-1">
+                                    <svg class="h-4 w-4 text-gray-400" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>2</span>
+                                </div>
+                            </td>
+                            <td class="px-4 py-3">
+                                <span class="px-2 py-1 text-xs font-medium status-badge rounded-full">
+                                    Pending
+                                </span>
+                            </td>
+                            <td class="px-4 py-3 text-sm text-gray-900"></td>
+                            <td class="px-4 py-3">
+                                <button class="text-gray-400 hover:text-gray-600">
+                                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="12" cy="5" r="1" />
+                                        <circle cx="12" cy="19" r="1" />
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows would be identical in structure, just with different data -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
